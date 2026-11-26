@@ -105,7 +105,7 @@ export default function App() {
       if(ext==='csv') {
         const text=await file.text();
         const parsed=Papa.parse(text,{header:true,skipEmptyLines:true,dynamicTyping:true});
-        if(parsed.errors.length) setUploadErrors(parsed.errors.map(x=>`CSV row ${x.row+2}: ${x.message}`));
+        if(parsed.errors.length) setUploadErrors(parsed.errors.map(x=>`CSV row ${(x.row??0)+2}: ${x.message}`));
         raw=parsed.data as any[];
       } else if(ext==='xlsx'||ext==='xls') {
         const wb=XLSX.read(await file.arrayBuffer(),{type:'array'});
