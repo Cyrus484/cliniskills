@@ -1,0 +1,3 @@
+program_code,procedure_code,procedure_title,step_no,step_description,max_score,critical,pass_mark
+RGN,RGN-001,Hand Hygiene,1,Remove hand jewellery,4,true,60
+RGN,RGN-001,Hand Hygiene,2,Wet hands with clean running water,4,false,60
